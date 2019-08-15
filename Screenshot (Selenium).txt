@@ -1,0 +1,27 @@
+package Launch_org;
+
+import java.io.File;
+import java.io.IOException;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Screenshot2 {
+
+	public static void main(String[] args) throws IOException {
+		
+	
+	System.getProperty("webdriver.chrome.driver","C:\\Users\\Hemraj\\eclipse-workspace\\Selenium\\Driver\\chromedriver.exe");
+	WebDriver driver=new ChromeDriver();
+	driver.get("http://1.bp.blogspot.com/-W1n1_8ny9Aw/VoP-JLD9PhI/AAAAAAAAC6s/NLGSRXPtY9o/s1600/Actress%2BRakul-Preet-Singh-Hot-pics%2B2.jpg");
+	
+	TakesScreenshot ts=(TakesScreenshot)driver;
+	File source=ts.getScreenshotAs(OutputType.FILE);
+	String dest=System.getProperty("user.dir")+"/excel/rakul.png";
+	File destination=new File(dest);
+	FileUtils.copyFile(source, destination);
+	driver.quit();
+}}
