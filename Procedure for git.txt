@@ -2,6 +2,6 @@ $ git init
 $ git add .
 $ git status
 $ git commit -m "msg"
-$ git remote add origin https://github.com/hemaraj143/map.git
+$ git remote add origin https://github.com/hemaraj143/Sourcecode.git
 $ git pull --rebase origin master
 $ git push origin master
